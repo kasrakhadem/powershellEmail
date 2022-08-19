@@ -20,7 +20,7 @@ switch($args.Count)
 	$Subject=$args[3]}
 	5 {$EmailTo = $args[0]
 	$Name=$args[4]
-	$EmailFrom = New-Object MailAddress($args[1], $Name)
+	$EmailFrom = New-Object MailAddress($args[1], $Name);
 	$Email=$args[1]
 	$Pass=$args[2]
 	$Subject=$args[3]
@@ -32,7 +32,8 @@ switch($args.Count)
 	$Pass=$args[2]
 	$Subject=$args[3]
 	$Body=$args[5]}
-	Default {
+	
+	8 {
         {Write-Output "Too many args!"; Exit}
     }
 }
@@ -42,18 +43,5 @@ switch($args.Count)
 $SMTPServer = "smtp.gmail.com"
 $SMTPClient = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
 $SMTPClient.EnableSsl = $true
-$SMTPClient.Credentials = New-Object System.Net.NetworkCredential ($Email,$Pass)#("powershellscripternotification", "kakefxlznwgudnoc");
+$SMTPClient.Credentials = New-Object System.Net.NetworkCredential ($Email,$Pass)
 $SMTPClient.Send($EmailFrom, $EmailTo, $Subject, $Body)
-
-
-
-
-
-#$EmailFrom = New-Object MailAddress($args[1], "Notification Center"); #"powershellscripternotification@gmail.com"
-#if ($args[4] -ne $null)
-#{#
-	#	$EmailFrom = New-Object MailAddress($args[1], $args[4]); #"powershellscripternotification@gmail.com"
-#}
-#$EmailTo = $args[0]
-#$Subject = $args[1]
-#$Body = $Subject
