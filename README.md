@@ -11,9 +11,9 @@
 
 ## Arguments:  
  1. **Minimum**: ``` "Email_to" "Email_from" "Email_from_password"  ```
- 2. **With subject**: "Email_to" "Email_from" "Email_from_password" "Subject"  
- 3. **With Different Sender Name**: "Email_to" "Email_from" "Email_from_password" "Subject" "Sender Name"  
- 4. **With Body**: "Email_to" "Email_from" "Email_from_password" "Subject" "Sender Name" "Body"  
+ 2. **With subject**: ```"Email_to" "Email_from" "Email_from_password" "Subject" ``` 
+ 3. **With Different Sender Name**: ```"Email_to" "Email_from" "Email_from_password" "Subject" "Sender Name"  ```
+ 4. **With Body**: ```"Email_to" "Email_from" "Email_from_password" "Subject" "Sender Name" "Body"  ```
 	
 ## Powershell Use:  
 If the Set-ExecutionPolicy is not set:  
